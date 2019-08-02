@@ -1,9 +1,6 @@
+import studiesInitialState from '../initializers/studies'
 
-const studiesDefaultState = {
-    studies: []
-}
-
-const reducer = (state = studiesDefaultState, action) => {
+const reducer = (state = studiesInitialState, action) => {
     switch (action.type) {
         case 'GET_STUDIES':
             return {

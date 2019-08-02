@@ -1,5 +1,3 @@
-require('babel-polyfill')
-
 const controller = '/api/Studies'
 
 const getStudies = async () => {
@@ -11,7 +9,6 @@ const getStudies = async () => {
             "Accept": "application/json"
         }
     })
-    debugger
     const studies = await response.json()
     return { type: 'GET_STUDIES', studies }
 }

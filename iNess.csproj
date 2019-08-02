@@ -23,6 +23,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\.DS_Store" />
+    <None Remove="ClientApp\public\.DS_Store" />
+    <None Remove="ClientApp\src\.DS_Store" />
+    <None Remove="ClientApp\yarn-error.log" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\..\..\Code\Laniakea\NEFormValidationSystem\NEFormValidationSystem.csproj" />
     <ProjectReference Include="..\..\..\..\Code\Laniakea\NESS\NESS\NESS.csproj" />
   </ItemGroup>

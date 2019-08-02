@@ -6,10 +6,10 @@ import { setTextFilter, sortByName } from '../../actions/filters'
 class StudiesListFilters extends Component {
 
     onFilterInputChange = e => { this.props.dispatch(setTextFilter(e.target.value)) }
-    onDropDownChange = e => {
+    onDropDownChange = e => (
         e.target.value === 'name' ? this.props.dispatch(sortByName())
             : e.target.value === 'date' ? this.props.dispatch(sortByName()) : ''
-    }
+    )
 
     render() {
         const { props: filters } = this

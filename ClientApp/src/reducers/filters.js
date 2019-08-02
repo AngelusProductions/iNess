@@ -1,10 +1,6 @@
+import filtersInitialState from '../initializers/filters'
 
-const filtersDefaultState = {
-    text: 'vis', 
-    sortBy: 'name'
-}
-
-const reducer = (state = filtersDefaultState, action) => {
+const reducer = (state = filtersInitialState, action) => {
     switch (action.type) {
         case 'SET_TEXT_FILTER':
             return {
