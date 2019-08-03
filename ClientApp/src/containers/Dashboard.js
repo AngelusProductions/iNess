@@ -1,14 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import StudiesList from '../components/studiesList/StudiesList';
-import StudiesListFilters from '../components/studiesList/StudiesListFilters';
-
-import getStudies from '../actions/studies'
+import StudiesList from '../components/studiesList/StudiesList'
+import StudiesListFilters from '../components/studiesList/StudiesListFilters'
 
  class Dashboard extends Component {
-
-    componentDidMount() { this.props.dispatch(getStudies) }
 
      render() {
         return(
@@ -20,6 +16,4 @@ import getStudies from '../actions/studies'
     }
 }
 
-const mapStateToProps = ({ studies }) => studies
-
-export default connect(mapStateToProps)(Dashboard)
+export default connect(({ studies }) => studies)(Dashboard)

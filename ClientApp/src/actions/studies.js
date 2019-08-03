@@ -1,6 +1,6 @@
 const controller = '/api/Studies'
 
-const getStudies = async () => {
+const getStudies = async (dispatch) => {
     const url = `${controller}`
     const response = await fetch(url, {
         method: "GET",
@@ -10,7 +10,7 @@ const getStudies = async () => {
         }
     })
     const studies = await response.json()
-    return { type: 'GET_STUDIES', studies }
+    dispatch( { type: 'GET_STUDIES', studies } )
 }
 
 export default getStudies

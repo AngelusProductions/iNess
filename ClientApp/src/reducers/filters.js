@@ -1,6 +1,6 @@
 import filtersInitialState from '../initializers/filters'
 
-const reducer = (state = filtersInitialState, action) => {
+export default (state = filtersInitialState, action) => {
     switch (action.type) {
         case 'SET_TEXT_FILTER':
             return {
@@ -12,9 +12,17 @@ const reducer = (state = filtersInitialState, action) => {
                 ...state,
                 sortBy: 'name'
             }
+        case 'SORT_BY_SPONSOR':
+            return {
+                ...state,
+                sortBy: 'sponsor'
+            }
+        case 'SORT_BY_PROTOCOL':
+            return {
+                ...state,
+                sortBy: 'protocol'
+            }
         default:
             return state
   }
 }
-
-export default reducer

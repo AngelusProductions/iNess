@@ -1,16 +1,17 @@
 
-import React from 'react';
-import { Provider } from 'react-redux';
+import React from 'react'
+import { Provider } from 'react-redux'
 
-import AppRouter from './routers/AppRouter';
-import configureStore from './store/configureStore';
+import AppRouter from './routers/AppRouter'
+import configureStore from './store/configureStore'
 
-import 'normalize.css/normalize.css';
-import './styles/styles.scss';
+import 'normalize.css/normalize.css'
+import './styles/styles.scss'
 
-const store = configureStore();
+const store = configureStore()
 
-export default 
+export const App = (
     <Provider store={store}>
         <AppRouter />
     </Provider>
+)

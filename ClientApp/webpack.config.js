@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    entry: ["babel-polyfill", "./index.js"],
+    entry: "src/index.js",
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js'
@@ -14,6 +14,7 @@ module.exports = {
     }, {
       test: /\.s?css$/,
       use: [
+        'babel-loader',
         'style-loader',
         'css-loader',
         'sass-loader'
@@ -24,5 +25,9 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     historyApiFallback: true
-  }
+    },
+    output: {
+        filename: 'bundle.js',
+        path: __dirname + '/build'
+    }
 };

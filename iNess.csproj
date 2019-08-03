@@ -27,6 +27,7 @@
     <None Remove="ClientApp\public\.DS_Store" />
     <None Remove="ClientApp\src\.DS_Store" />
     <None Remove="ClientApp\yarn-error.log" />
+    <None Remove="yarn.lock" />
   </ItemGroup>
 
   <ItemGroup>

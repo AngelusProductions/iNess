@@ -1,7 +1,6 @@
 {
   "name": "iNess",
   "version": "0.0.1",
-  "main": "./app.js",
   "author": "Corey Angelus, Benjamin Chen, Justin Roberge, Mike Stanley",
   "license": "MIT",
   "scripts": {
