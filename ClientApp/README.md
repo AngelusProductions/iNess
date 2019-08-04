@@ -1,0 +1,1 @@
+1. Don't add webpack, babel-loader to package.json -- it automatically does it for you
